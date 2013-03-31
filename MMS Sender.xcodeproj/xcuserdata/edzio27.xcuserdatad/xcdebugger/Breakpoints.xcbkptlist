@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
-         timestampString = "385419172.712053"
+         timestampString = "386446464.893799"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "21"
-         endingLineNumber = "21"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
          landmarkName = "+scaleImage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Controllers/TakePhotoViewController.m"
-         timestampString = "385423032.22906"
+         timestampString = "386439445.18992"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
          landmarkName = "-dismissViewAndGoToMainTabBarController"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Controllers/EKMMSSenderViewController.m"
-         timestampString = "385422664.205806"
+         timestampString = "386440270.424647"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "52"
-         endingLineNumber = "52"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
          landmarkName = "-sendMMS"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
-         timestampString = "385423398.464944"
+         timestampString = "386446464.893799"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
          landmarkName = "+scaleImageData:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
-         timestampString = "385423747.982144"
+         timestampString = "386446464.893799"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
          landmarkName = "+scaleImageData:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
-         timestampString = "385423825.144202"
+         timestampString = "386445457.880778"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
+         startingLineNumber = "16"
+         endingLineNumber = "16"
+         landmarkName = "+scaleImage:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
+         timestampString = "386446464.893799"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "+scaleImageData:"
          landmarkType = "5">
       </FileBreakpoint>

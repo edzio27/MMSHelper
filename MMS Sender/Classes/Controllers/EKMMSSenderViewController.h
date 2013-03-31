@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMessageComposeViewController.h>
 
-@interface EKMMSSenderViewController : UIViewController <MFMessageComposeViewControllerDelegate>
+@interface EKMMSSenderViewController : UIViewController <MFMessageComposeViewControllerDelegate, UIAlertViewDelegate>
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil imageToSemd:(NSData *)image;
 

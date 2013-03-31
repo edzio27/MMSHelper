@@ -8,7 +8,6 @@
 
 #import "TakePhotoViewController.h"
 #import "EKAppDelegate.h"
-#import "EKMMSSenderViewController.h"
 #import "UIImage+ScaleImage.h"
 
 static BOOL cameraViewWasShown;

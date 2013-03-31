@@ -9,14 +9,28 @@
 #import "UIImage+ScaleImage.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
-#define MAX_BYTES 30000
+#define MAX_BYTES 300000
 
 @implementation UIImage (ScaleImage)
 
 + (NSData *)scaleImage:(NSString *)imagePath {
     UIImage *image = [UIImage imageWithData:[self getRawDataFromALAsset:imagePath]];
+    
+    if(image.size.width < image.size.height) {
+        UIGraphicsBeginImageContext(CGSizeMake(640, 640*(image.size.height/image.size.width)));
+        [image drawInRect:CGRectMake(0, 0, 640, 640*(image.size.height/image.size.width))];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    } else {
+        NSLog(@"size width=%d height=%f",720, 720*(image.size.height/image.size.width));
+        UIGraphicsBeginImageContext(CGSizeMake(720, 720*(image.size.height/image.size.width)));
+        [image drawInRect:CGRectMake(0, 0, 720, 720*(image.size.height/image.size.width))];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    
     NSData *imageData = nil;
-    for(float i = 1; i <= 100; i+=0.2 ) {
+    for(double i = 1; i <= 100; i+=0.05 ) {
         imageData = [[NSData alloc] initWithData:UIImageJPEGRepresentation((image), 1.0/i)];
         if(imageData.length <= MAX_BYTES) {
             break;
@@ -29,20 +43,22 @@
     UIImage *image = [UIImage imageWithData:data];
     
     if(image.size.width < image.size.height) {
-        UIGraphicsBeginImageContext(CGSizeMake(640, 720));
-        [image drawInRect:CGRectMake(0, 0, 640, 720)];
+        UIGraphicsBeginImageContext(CGSizeMake(640, 640*(image.size.height/image.size.width)));
+        [image drawInRect:CGRectMake(0, 0, 640, 640*(image.size.height/image.size.width))];
         image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     } else {
-        UIGraphicsBeginImageContext(CGSizeMake(720, 640));
-        [image drawInRect:CGRectMake(0, 0, 720, 640)];
+        
+        NSLog(@"size width=%d height=%f",720, 720*(image.size.height/image.size.width));
+        UIGraphicsBeginImageContext(CGSizeMake(720, 720*(image.size.height/image.size.width)));
+        [image drawInRect:CGRectMake(0, 0, 720, 720*(image.size.height/image.size.width))];
         image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }
     
     
     NSData *imageData = nil;
-    for(float i = 1; i <= 100; i+=0.2 ) {
+    for(double i = 1; i <= 100; i+=0.05 ) {
         imageData = [[NSData alloc] initWithData:UIImageJPEGRepresentation((image), 1.0/i)];
         NSLog(@"data %d", imageData.length);
         if(imageData.length <= MAX_BYTES) {

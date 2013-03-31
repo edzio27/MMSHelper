@@ -34,8 +34,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self performSelector:@selector(sendMMS) withObject:self afterDelay:0.2];
+    [self performSelector:@selector(showAlert) withObject:self afterDelay:0.2];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)showAlert {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zmianiono rozmiar" message:[NSString stringWithFormat:@"%lu kB", (unsigned long)self.imageToSend.length/1000] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    alertView.tag = 111;
+    [alertView show];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,5 +75,13 @@
     }
 }
 #pragma end
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(alertView.tag == 111) {
+        if(buttonIndex == 0) {
+            [self sendMMS];
+        }
+    }
+}
 
 @end
