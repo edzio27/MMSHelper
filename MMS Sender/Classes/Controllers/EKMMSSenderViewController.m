@@ -34,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     [self performSelector:@selector(showAlert) withObject:self afterDelay:0.2];
     // Do any additional setup after loading the view from its nib.
 }

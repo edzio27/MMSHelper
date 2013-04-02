@@ -70,6 +70,8 @@
                                                                    - 34)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
 }
@@ -92,6 +94,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     ALAssetsGroup *group = (ALAssetsGroup*)[assets objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ ",[group valueForProperty:ALAssetsGroupPropertyName]];
+    cell.textLabel.textColor = [UIColor whiteColor];
     [cell.imageView setImage:[UIImage imageWithCGImage:[(ALAssetsGroup*)[assets objectAtIndex:indexPath.row] posterImage]]];
     
     return cell;
@@ -156,7 +159,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Wgraj plik";
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.navigationItem.title = @"Wybierz rolke";
     [self.navigationItem setRightBarButtonItem:self.edit];
     
     assets = [[NSMutableArray alloc] init];

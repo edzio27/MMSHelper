@@ -47,6 +47,7 @@ static BOOL cameraViewWasShown;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -11,6 +11,12 @@
 #import "EKViewController.h"
 #import "EKMMSSenderViewController.h"
 
+@interface EKAppDelegate ()
+
+@property (nonatomic, strong) TakePhotoViewController *camera;
+
+@end
+
 @implementation EKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -29,16 +35,21 @@
     return YES;
 }
 
+- (TakePhotoViewController *)camera {
+    if(_camera == nil) {
+        _camera = [[TakePhotoViewController alloc] initWithNibName:@"TakePhotoViewController" bundle:nil];
+        [_camera.view setBackgroundColor:[UIColor blackColor]];
+    }
+    return _camera;
+}
+
 - (void)transitionToCamera {
-    TakePhotoViewController *camera = [[TakePhotoViewController alloc] initWithNibName:@"TakePhotoViewController" bundle:nil];
-    [camera.view setBackgroundColor:[UIColor blackColor]];
-    
     [UIView transitionFromView:self.window.rootViewController.view
-                        toView:camera.view
+                        toView:self.camera.view
                       duration:0.65f
                        options:UIViewAnimationOptionTransitionFlipFromLeft
                     completion:^(BOOL finished){
-                        self.window.rootViewController = camera;
+                        self.window.rootViewController = self.camera;
                     }];
 }
 
@@ -49,6 +60,7 @@
                       duration:0.65f
                        options:UIViewAnimationOptionTransitionFlipFromRight
                     completion:^(BOOL finished){
+                        //[self.navigationController popToRootViewControllerAnimated:NO];
                         self.window.rootViewController = [self.navigationController.viewControllers objectAtIndex:0];
                     }];
 }

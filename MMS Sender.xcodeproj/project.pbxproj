@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DB7E1C7616F9086700AF662C /* TakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7E1C7416F9086700AF662C /* TakePhotoViewController.m */; };
 		DB7E1C7716F9086700AF662C /* TakePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7E1C7516F9086700AF662C /* TakePhotoViewController.xib */; };
+		DB94704F170B37BE003327DE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB94704E170B37BD003327DE /* QuartzCore.framework */; };
+		DB947051170B3A05003327DE /* blue-gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB947050170B3A05003327DE /* blue-gradient.jpg */; };
+		DB947053170B3B5D003327DE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DB947052170B3B5D003327DE /* background.png */; };
 		DB947A6216F7A39E00733381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947A6116F7A39E00733381 /* UIKit.framework */; };
 		DB947A6416F7A39E00733381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947A6316F7A39E00733381 /* Foundation.framework */; };
 		DB947A6616F7A39E00733381 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947A6516F7A39E00733381 /* CoreGraphics.framework */; };
@@ -39,6 +42,9 @@
 		DB7E1C7316F9086700AF662C /* TakePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhotoViewController.h; sourceTree = "<group>"; };
 		DB7E1C7416F9086700AF662C /* TakePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePhotoViewController.m; sourceTree = "<group>"; };
 		DB7E1C7516F9086700AF662C /* TakePhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TakePhotoViewController.xib; sourceTree = "<group>"; };
+		DB94704E170B37BD003327DE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DB947050170B3A05003327DE /* blue-gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue-gradient.jpg"; sourceTree = "<group>"; };
+		DB947052170B3B5D003327DE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		DB947A5D16F7A39E00733381 /* MMS Sender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MMS Sender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB947A6116F7A39E00733381 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DB947A6316F7A39E00733381 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB94704F170B37BE003327DE /* QuartzCore.framework in Frameworks */,
 				DB947ACE16F7A85C00733381 /* MessageUI.framework in Frameworks */,
 				DB947AA316F7A48D00733381 /* AssetsLibrary.framework in Frameworks */,
 				DB947A6216F7A39E00733381 /* UIKit.framework in Frameworks */,
@@ -94,6 +101,7 @@
 		DB947A5216F7A39E00733381 = {
 			isa = PBXGroup;
 			children = (
+				DB94704E170B37BD003327DE /* QuartzCore.framework */,
 				DB947ACD16F7A85C00733381 /* MessageUI.framework */,
 				DB947AA216F7A48D00733381 /* AssetsLibrary.framework */,
 				DB947A6716F7A39E00733381 /* MMS Sender */,
@@ -140,6 +148,8 @@
 		DB947A6816F7A39E00733381 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DB947052170B3B5D003327DE /* background.png */,
+				DB947050170B3A05003327DE /* blue-gradient.jpg */,
 				DB947A6916F7A39E00733381 /* MMS Sender-Info.plist */,
 				DB947A6A16F7A39E00733381 /* InfoPlist.strings */,
 				DB947A6D16F7A39E00733381 /* main.m */,
@@ -256,6 +266,8 @@
 				DB947AC716F7A51200733381 /* check-box-list.png in Resources */,
 				DB947AD316F7A92400733381 /* EKMMSSenderViewController.xib in Resources */,
 				DB7E1C7716F9086700AF662C /* TakePhotoViewController.xib in Resources */,
+				DB947051170B3A05003327DE /* blue-gradient.jpg in Resources */,
+				DB947053170B3B5D003327DE /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

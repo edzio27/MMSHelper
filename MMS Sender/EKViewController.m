@@ -10,6 +10,8 @@
 #import "UploadViewController.h"
 #import "TakePhotoViewController.h"
 #import "EKAppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface EKViewController ()
 
@@ -20,6 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -79,6 +79,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.backgroundColor = [UIColor clearColor];
     }
     return _tableView;
 }
@@ -86,7 +87,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return ceil((double) self.mutableAssets.count/NUMBER_OF_IMAGES_IN_ROW);
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -220,9 +220,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.navigationItem.title = @"Wybierz zdjęcie";
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    self.navigationItem.title = @"Wybierz obraz";
     [self.navigationItem setRightBarButtonItem:self.edit];
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    
+    /*
+    UIImage *back = [[UIImage imageNamed:@"back" ] stretchableImageWithLeftCapWidth:15 topCapHeight:0];
+    UIImage *back_pressed = [[UIImage imageNamed:@"back_pressed"] stretchableImageWithLeftCapWidth:15 topCapHeight:0];
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setBackgroundImage:back forState:UIControlStateNormal];
+    [backButton setBackgroundImage:back_pressed forState:UIControlStateHighlighted];
+    
+    [backButton setTitle:@"Powrót" forState:UIControlStateNormal];
+    [backButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [backButton addTarget:self action:@selector(didTapBackButton) forControlEvents:UIControlEventTouchUpInside];
+    backButton.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    backButton.frame = CGRectMake(0.0f, 0.0f, 77.0f, 29.0f);
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backButtonItem;
+    */
+    self.mutableAssets = tempArray;
+    
     [self.view addSubview:self.tableView];
     [self preparePhotos];
     // Do any additional setup after loading the view from its nib.
