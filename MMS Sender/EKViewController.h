@@ -13,4 +13,7 @@
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)selectImage:(id)sender;
 
+@property (nonatomic, strong) IBOutlet UIButton *cameraButton;
+@property (nonatomic, strong) IBOutlet UIButton *rollButton;
+
 @end

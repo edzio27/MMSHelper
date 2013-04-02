@@ -15,15 +15,31 @@
 
 @interface EKViewController ()
 
+@property (nonatomic, strong) UILabel *author;
+
 @end
 
 @implementation EKViewController
+
+- (UILabel *)author {
+    if(_author == nil) {
+        _author = [[UILabel alloc] initWithFrame:CGRectMake(20, [UIScreen mainScreen].bounds.size.height - 100, 200, 30)];
+        _author.textColor = [UIColor blackColor];
+        _author.backgroundColor = [UIColor clearColor];
+        _author.text = @"created by @edzio27";
+    }
+    return _author;
+    
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
+    
+    self.cameraButton.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:self.author];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
