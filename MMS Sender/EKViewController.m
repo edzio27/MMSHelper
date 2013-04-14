@@ -37,7 +37,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
-    
+    self.navigationItem.title = @"MMS Sender";
     self.cameraButton.backgroundColor = [UIColor blackColor];
     [self.view addSubview:self.author];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -50,8 +50,16 @@
 }
 
 - (IBAction)takePhoto:(id)sender {
-    EKAppDelegate * delegate  = (EKAppDelegate*) [[UIApplication sharedApplication] delegate];
-    [delegate transitionToCamera];
+    //EKAppDelegate * delegate  = (EKAppDelegate*) [[UIApplication sharedApplication] delegate];
+    //[delegate transitionToCamera];
+    TakePhotoViewController *camera = [[TakePhotoViewController alloc] initWithNibName:@"TakePhotoViewController" bundle:nil];
+
+    [UIView  beginAnimations:nil context:NULL];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.75];
+    [self.navigationController pushViewController:camera animated:NO];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+    [UIView commitAnimations];
 }
 - (IBAction)selectImage:(id)sender {
     UploadViewController *image = [[UploadViewController alloc] init];

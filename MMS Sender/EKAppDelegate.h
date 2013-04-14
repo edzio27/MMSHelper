@@ -17,7 +17,4 @@
 @property (strong, nonatomic) EKViewController *viewController;
 @property (nonatomic, strong) UINavigationController *navigationController;
 
-- (void)transitionToCamera;
-- (void)transitionToTabs;
-- (void)transitionToTabsAndOpenMMS:(NSData *)data;
 @end

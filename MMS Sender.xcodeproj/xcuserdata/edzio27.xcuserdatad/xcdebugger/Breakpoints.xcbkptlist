@@ -8,58 +8,6 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
-         timestampString = "386446464.893799"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
-         landmarkName = "+scaleImage:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MMS Sender/Classes/Controllers/EKMMSSenderViewController.m"
-         timestampString = "386613072.826807"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59"
-         landmarkName = "-sendMMS"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
-         timestampString = "386446464.893799"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
-         landmarkName = "+scaleImageData:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
-         timestampString = "386446464.893799"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
-         landmarkName = "+scaleImageData:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
          timestampString = "386445457.880778"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
@@ -72,26 +20,13 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "MMS Sender/Classes/Helpers/UIImage+ScaleImage.m"
-         timestampString = "386446464.893799"
+         filePath = "MMS Sender/Classes/Controllers/EKMMSSenderViewController.m"
+         timestampString = "387653192.045523"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "42"
-         endingLineNumber = "42"
-         landmarkName = "+scaleImageData:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MMS Sender/EKAppDelegate.m"
-         timestampString = "386609745.172171"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68"
-         landmarkName = "-transitionToTabsAndOpenMMS:"
+         startingLineNumber = "74"
+         endingLineNumber = "74"
+         landmarkName = "-sendMMS"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

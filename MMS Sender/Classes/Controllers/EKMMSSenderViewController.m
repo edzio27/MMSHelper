@@ -40,7 +40,7 @@
 }
 
 - (void)showAlert {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zmianiono rozmiar" message:[NSString stringWithFormat:@"%lu kB", (unsigned long)self.imageToSend.length/1000] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zmieniono rozmiar" message:[NSString stringWithFormat:@"%lu kB", (unsigned long)self.imageToSend.length/1000] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     alertView.tag = 111;
     [alertView show];
 }
@@ -72,6 +72,7 @@
         self.picker.body = emailBody;
         dispatch_async(dispatch_get_main_queue(), ^{
             [[UIApplication sharedApplication] openURL:url];
+            [self.navigationController popToRootViewControllerAnimated:NO];
         });
     }
 }

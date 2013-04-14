@@ -9,6 +9,7 @@
 #import "TakePhotoViewController.h"
 #import "EKAppDelegate.h"
 #import "UIImage+ScaleImage.h"
+#import "EKMMSSenderViewController.h"
 
 static BOOL cameraViewWasShown;
 
@@ -65,8 +66,16 @@ static BOOL cameraViewWasShown;
 
 - (void)dismissViewAndGoToMainTabBarController {
     [self dismissModalViewControllerAnimated:NO];
-    EKAppDelegate * delegate  = (EKAppDelegate*) [[UIApplication sharedApplication] delegate];
-    [delegate transitionToTabs];
+    [UIView  beginAnimations:nil context:NULL];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.75];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+    [UIView commitAnimations];
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDelay:0.375];
+    [self.navigationController popViewControllerAnimated:NO];
+    [UIView commitAnimations];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,12 +86,13 @@ static BOOL cameraViewWasShown;
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    [self dismissModalViewControllerAnimated:YES];
     self.imageSource = [info objectForKey:UIImagePickerControllerOriginalImage];
-    [self dismissModalViewControllerAnimated:NO];
-    EKAppDelegate * delegate  = (EKAppDelegate*) [[UIApplication sharedApplication] delegate];
-    
     NSData *data = [UIImage scaleImageData:UIImageJPEGRepresentation(self.imageSource, 1.0)];
-    [delegate transitionToTabsAndOpenMMS:data];
+    
+    EKMMSSenderViewController *mms = [[EKMMSSenderViewController alloc] initWithNibName:@"EKMMSSenderViewController" bundle:nil imageToSemd:data];
+    //[self performSelector:@selector(popToRootViewControllerMethod) withObject:self afterDelay:2.0];
+    [self.navigationController pushViewController:mms animated:YES];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker

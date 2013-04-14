@@ -13,8 +13,6 @@
 
 @interface EKAppDelegate ()
 
-@property (nonatomic, strong) TakePhotoViewController *camera;
-
 @end
 
 @implementation EKAppDelegate
@@ -33,49 +31,6 @@
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
-}
-
-- (TakePhotoViewController *)camera {
-    if(_camera == nil) {
-        _camera = [[TakePhotoViewController alloc] initWithNibName:@"TakePhotoViewController" bundle:nil];
-        [_camera.view setBackgroundColor:[UIColor blackColor]];
-    }
-    return _camera;
-}
-
-- (void)transitionToCamera {
-    [UIView transitionFromView:self.window.rootViewController.view
-                        toView:self.camera.view
-                      duration:0.65f
-                       options:UIViewAnimationOptionTransitionFlipFromLeft
-                    completion:^(BOOL finished){
-                        self.window.rootViewController = self.camera;
-                    }];
-}
-
--(void) transitionToTabs {
-    UIViewController *controller = [self.navigationController.viewControllers objectAtIndex:0];
-    [UIView transitionFromView:self.window.rootViewController.view
-                        toView:controller.view
-                      duration:0.65f
-                       options:UIViewAnimationOptionTransitionFlipFromRight
-                    completion:^(BOOL finished){
-                        //[self.navigationController popToRootViewControllerAnimated:NO];
-                        self.window.rootViewController = [self.navigationController.viewControllers objectAtIndex:0];
-                    }];
-}
-
--(void) transitionToTabsAndOpenMMS:(NSData *)data {
-    UIViewController *controller = [self.navigationController.viewControllers objectAtIndex:0];
-    [UIView transitionFromView:self.window.rootViewController.view
-                        toView:controller.view
-                      duration:0.65f
-                       options:UIViewAnimationOptionTransitionFlipFromRight
-                    completion:^(BOOL finished){
-                        EKMMSSenderViewController *mms = [[EKMMSSenderViewController alloc] initWithNibName:@"EKMMSSenderViewController" bundle:nil imageToSemd:data];
-                        [self.navigationController pushViewController:mms animated:NO];
-                        self.window.rootViewController = self.navigationController;
-                    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
