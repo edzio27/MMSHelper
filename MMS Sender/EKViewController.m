@@ -36,11 +36,24 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
+    //[self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     self.navigationItem.title = @"MMS Sender";
-    self.cameraButton.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:self.author];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    /* title label */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 100, 30)];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0];
+    label.text = @"MMS Sender";
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"tabbar.png"] forBarMetrics:UIBarMetricsDefault];
+    self.navigationItem.titleView = label;
+
+    //self.cameraButton.backgroundColor = [UIColor blackColor];
+    //[self.view addSubview:self.author];
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning

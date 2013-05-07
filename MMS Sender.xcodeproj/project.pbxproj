@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		DB7E1C7616F9086700AF662C /* TakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7E1C7416F9086700AF662C /* TakePhotoViewController.m */; };
 		DB7E1C7716F9086700AF662C /* TakePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7E1C7516F9086700AF662C /* TakePhotoViewController.xib */; };
+		DB8EB6751739A5E5005F9704 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB6741739A5E5005F9704 /* background.png */; };
+		DB8EB6771739A621005F9704 /* take_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB6761739A621005F9704 /* take_picture.png */; };
+		DB8EB6791739AB41005F9704 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB6781739AB41005F9704 /* select.png */; };
+		DB8EB67F1739B09F005F9704 /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB67E1739B09F005F9704 /* tabbar.png */; };
 		DB94704F170B37BE003327DE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB94704E170B37BD003327DE /* QuartzCore.framework */; };
-		DB947051170B3A05003327DE /* blue-gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB947050170B3A05003327DE /* blue-gradient.jpg */; };
-		DB947053170B3B5D003327DE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DB947052170B3B5D003327DE /* background.png */; };
 		DB947A6216F7A39E00733381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947A6116F7A39E00733381 /* UIKit.framework */; };
 		DB947A6416F7A39E00733381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947A6316F7A39E00733381 /* Foundation.framework */; };
 		DB947A6616F7A39E00733381 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947A6516F7A39E00733381 /* CoreGraphics.framework */; };
@@ -36,12 +38,17 @@
 		DB947AD216F7A92400733381 /* EKMMSSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB947AD016F7A92400733381 /* EKMMSSenderViewController.m */; };
 		DB947AD316F7A92400733381 /* EKMMSSenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB947AD116F7A92400733381 /* EKMMSSenderViewController.xib */; };
 		DB947AD616F7AC5300733381 /* UIImage+ScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB947AD516F7AC5300733381 /* UIImage+ScaleImage.m */; };
+		DBFBB3AB171DE76B007FD75A /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFBB3AA171DE76B007FD75A /* header.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB7E1C7316F9086700AF662C /* TakePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhotoViewController.h; sourceTree = "<group>"; };
 		DB7E1C7416F9086700AF662C /* TakePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePhotoViewController.m; sourceTree = "<group>"; };
 		DB7E1C7516F9086700AF662C /* TakePhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TakePhotoViewController.xib; sourceTree = "<group>"; };
+		DB8EB6741739A5E5005F9704 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		DB8EB6761739A621005F9704 /* take_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_picture.png; sourceTree = "<group>"; };
+		DB8EB6781739AB41005F9704 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
+		DB8EB67E1739B09F005F9704 /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
 		DB94704E170B37BD003327DE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DB947050170B3A05003327DE /* blue-gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue-gradient.jpg"; sourceTree = "<group>"; };
 		DB947052170B3B5D003327DE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -79,6 +86,7 @@
 		DB947AD116F7A92400733381 /* EKMMSSenderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKMMSSenderViewController.xib; sourceTree = "<group>"; };
 		DB947AD416F7AC5300733381 /* UIImage+ScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ScaleImage.h"; sourceTree = "<group>"; };
 		DB947AD516F7AC5300733381 /* UIImage+ScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ScaleImage.m"; sourceTree = "<group>"; };
+		DBFBB3AA171DE76B007FD75A /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +204,11 @@
 		DB947ABF16F7A48D00733381 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB8EB67E1739B09F005F9704 /* tabbar.png */,
+				DB8EB6781739AB41005F9704 /* select.png */,
+				DB8EB6761739A621005F9704 /* take_picture.png */,
+				DB8EB6741739A5E5005F9704 /* background.png */,
+				DBFBB3AA171DE76B007FD75A /* header.png */,
 				DB947AC416F7A51200733381 /* box-checked.png */,
 				DB947AC516F7A51200733381 /* check-box-list.png */,
 			);
@@ -266,8 +279,11 @@
 				DB947AC716F7A51200733381 /* check-box-list.png in Resources */,
 				DB947AD316F7A92400733381 /* EKMMSSenderViewController.xib in Resources */,
 				DB7E1C7716F9086700AF662C /* TakePhotoViewController.xib in Resources */,
-				DB947051170B3A05003327DE /* blue-gradient.jpg in Resources */,
-				DB947053170B3B5D003327DE /* background.png in Resources */,
+				DBFBB3AB171DE76B007FD75A /* header.png in Resources */,
+				DB8EB6751739A5E5005F9704 /* background.png in Resources */,
+				DB8EB6771739A621005F9704 /* take_picture.png in Resources */,
+				DB8EB6791739AB41005F9704 /* select.png in Resources */,
+				DB8EB67F1739B09F005F9704 /* tabbar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
