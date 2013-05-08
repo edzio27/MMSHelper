@@ -43,6 +43,7 @@
 - (UIBarButtonItem *)edit {
     if(_edit == nil) {
         _edit = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStylePlain target:self action:@selector(uploadAllSelectedImages)];
+        [_edit setImage:[UIImage imageNamed:@"upload"]];
         _edit.enabled = NO;
     }
     return _edit;
@@ -161,7 +162,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     self.navigationItem.title = @"Select roll";
-    [self.navigationItem setRightBarButtonItem:self.edit];
+    //[self.navigationItem setRightBarButtonItem:self.edit];
     
     /* title label */
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 100, 30)];
@@ -176,16 +177,30 @@
     /* custom back button */
     UIView *buttonHoler = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
     UIButton *backButton = [UIButton buttonWithType: UIButtonTypeCustom];
-    [backButton setBackgroundImage: [UIImage imageNamed: @"buttonBack.png"]  forState:UIControlStateNormal];
+    [backButton setBackgroundImage: [UIImage imageNamed: @"back"]  forState:UIControlStateNormal];
     [backButton setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
     [backButton setTitle: NSLocalizedString(@"Back", nil) forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
     [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    [backButton setFrame:CGRectMake(0, 2, 60, 34)];
+    [backButton setFrame:CGRectMake(0, 5, 60, 34)];
     backButton.contentEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0);
     backButton.titleLabel.textAlignment = UITextAlignmentCenter;
     [buttonHoler addSubview: backButton];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler];
+    
+    /* custom upload button */
+    UIView *buttonHoler1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
+    UIButton *backButton1 = [UIButton buttonWithType: UIButtonTypeCustom];
+    [backButton1 setBackgroundImage: [UIImage imageNamed: @"upload"]  forState:UIControlStateNormal];
+    [backButton1 setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
+    [backButton1 setTitle: NSLocalizedString(@"Send", nil) forState:UIControlStateNormal];
+    backButton1.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
+    [backButton1 addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [backButton1 setFrame:CGRectMake(0, 5, 60, 34)];
+    //backButton1.contentEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0);
+    backButton1.titleLabel.textAlignment = UITextAlignmentCenter;
+    [buttonHoler1 addSubview: backButton1];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler1];
     
     
     assets = [[NSMutableArray alloc] init];

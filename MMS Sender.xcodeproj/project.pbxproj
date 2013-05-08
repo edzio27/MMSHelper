@@ -38,6 +38,8 @@
 		DB947AD216F7A92400733381 /* EKMMSSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB947AD016F7A92400733381 /* EKMMSSenderViewController.m */; };
 		DB947AD316F7A92400733381 /* EKMMSSenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB947AD116F7A92400733381 /* EKMMSSenderViewController.xib */; };
 		DB947AD616F7AC5300733381 /* UIImage+ScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB947AD516F7AC5300733381 /* UIImage+ScaleImage.m */; };
+		DBA85C26173AB4B700AC86F1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C25173AB4B700AC86F1 /* back.png */; };
+		DBA85C28173AB68200AC86F1 /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C27173AB68200AC86F1 /* upload.png */; };
 		DBFBB3AB171DE76B007FD75A /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFBB3AA171DE76B007FD75A /* header.png */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +52,6 @@
 		DB8EB6781739AB41005F9704 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		DB8EB67E1739B09F005F9704 /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
 		DB94704E170B37BD003327DE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DB947050170B3A05003327DE /* blue-gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue-gradient.jpg"; sourceTree = "<group>"; };
-		DB947052170B3B5D003327DE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		DB947A5D16F7A39E00733381 /* MMS Sender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MMS Sender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB947A6116F7A39E00733381 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DB947A6316F7A39E00733381 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +86,8 @@
 		DB947AD116F7A92400733381 /* EKMMSSenderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKMMSSenderViewController.xib; sourceTree = "<group>"; };
 		DB947AD416F7AC5300733381 /* UIImage+ScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ScaleImage.h"; sourceTree = "<group>"; };
 		DB947AD516F7AC5300733381 /* UIImage+ScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ScaleImage.m"; sourceTree = "<group>"; };
+		DBA85C25173AB4B700AC86F1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		DBA85C27173AB68200AC86F1 /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
 		DBFBB3AA171DE76B007FD75A /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,8 +158,6 @@
 		DB947A6816F7A39E00733381 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DB947052170B3B5D003327DE /* background.png */,
-				DB947050170B3A05003327DE /* blue-gradient.jpg */,
 				DB947A6916F7A39E00733381 /* MMS Sender-Info.plist */,
 				DB947A6A16F7A39E00733381 /* InfoPlist.strings */,
 				DB947A6D16F7A39E00733381 /* main.m */,
@@ -204,6 +204,8 @@
 		DB947ABF16F7A48D00733381 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBA85C27173AB68200AC86F1 /* upload.png */,
+				DBA85C25173AB4B700AC86F1 /* back.png */,
 				DB8EB67E1739B09F005F9704 /* tabbar.png */,
 				DB8EB6781739AB41005F9704 /* select.png */,
 				DB8EB6761739A621005F9704 /* take_picture.png */,
@@ -284,6 +286,8 @@
 				DB8EB6771739A621005F9704 /* take_picture.png in Resources */,
 				DB8EB6791739AB41005F9704 /* select.png in Resources */,
 				DB8EB67F1739B09F005F9704 /* tabbar.png in Resources */,
+				DBA85C26173AB4B700AC86F1 /* back.png in Resources */,
+				DBA85C28173AB68200AC86F1 /* upload.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

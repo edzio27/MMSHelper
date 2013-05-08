@@ -222,7 +222,35 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     self.navigationItem.title = @"Select image";
-    [self.navigationItem setRightBarButtonItem:self.edit];
+
+    /* custom back button */
+    UIView *buttonHoler = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
+    UIButton *backButton = [UIButton buttonWithType: UIButtonTypeCustom];
+    [backButton setBackgroundImage: [UIImage imageNamed: @"back"]  forState:UIControlStateNormal];
+    [backButton setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
+    [backButton setTitle: NSLocalizedString(@"Back", nil) forState:UIControlStateNormal];
+    backButton.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
+    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [backButton setFrame:CGRectMake(0, 5, 60, 34)];
+    backButton.contentEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0);
+    backButton.titleLabel.textAlignment = UITextAlignmentCenter;
+    [buttonHoler addSubview: backButton];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler];
+    
+    /* custom upload button */
+    UIView *buttonHoler1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
+    UIButton *backButton1 = [UIButton buttonWithType: UIButtonTypeCustom];
+    [backButton1 setBackgroundImage: [UIImage imageNamed: @"upload"]  forState:UIControlStateNormal];
+    [backButton1 setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
+    [backButton1 setTitle: NSLocalizedString(@"Send", nil) forState:UIControlStateNormal];
+    backButton1.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
+    [backButton1 addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [backButton1 setFrame:CGRectMake(0, 5, 60, 34)];
+    //backButton1.contentEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0);
+    backButton1.titleLabel.textAlignment = UITextAlignmentCenter;
+    [buttonHoler1 addSubview: backButton1];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler1];
+    
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     
     /* title label */
@@ -235,27 +263,15 @@
     label.text = @"Select image";
     self.navigationItem.titleView = label;
     
-    /*
-    UIImage *back = [[UIImage imageNamed:@"back" ] stretchableImageWithLeftCapWidth:15 topCapHeight:0];
-    UIImage *back_pressed = [[UIImage imageNamed:@"back_pressed"] stretchableImageWithLeftCapWidth:15 topCapHeight:0];
-    
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [backButton setBackgroundImage:back forState:UIControlStateNormal];
-    [backButton setBackgroundImage:back_pressed forState:UIControlStateHighlighted];
-    
-    [backButton setTitle:@"Powrót" forState:UIControlStateNormal];
-    [backButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
-    [backButton addTarget:self action:@selector(didTapBackButton) forControlEvents:UIControlEventTouchUpInside];
-    backButton.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-    backButton.frame = CGRectMake(0.0f, 0.0f, 77.0f, 29.0f);
-    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
-    self.navigationItem.leftBarButtonItem = backButtonItem;
-    */
     self.mutableAssets = tempArray;
     
     [self.view addSubview:self.tableView];
     [self preparePhotos];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
