@@ -36,7 +36,6 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    //[self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     self.navigationItem.title = @"MMS Sender";
     
     /* title label */

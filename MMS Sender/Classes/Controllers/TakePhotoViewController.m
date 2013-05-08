@@ -48,6 +48,17 @@ static BOOL cameraViewWasShown;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    /* title label */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 100, 30)];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0];
+    label.text = @"Photo";
+    self.navigationItem.titleView = label;
+    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     // Do any additional setup after loading the view from its nib.
 }

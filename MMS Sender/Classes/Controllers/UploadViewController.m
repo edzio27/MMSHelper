@@ -42,7 +42,7 @@
 
 - (UIBarButtonItem *)edit {
     if(_edit == nil) {
-        _edit = [[UIBarButtonItem alloc] initWithTitle:@"Wgraj" style:UIBarButtonItemStylePlain target:self action:@selector(uploadAllSelectedImages)];
+        _edit = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStylePlain target:self action:@selector(uploadAllSelectedImages)];
         _edit.enabled = NO;
     }
     return _edit;
@@ -160,8 +160,33 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    self.navigationItem.title = @"Wybierz rolke";
+    self.navigationItem.title = @"Select roll";
     [self.navigationItem setRightBarButtonItem:self.edit];
+    
+    /* title label */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 100, 30)];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0];
+    label.text = @"Select roll";
+    self.navigationItem.titleView = label;
+    
+    /* custom back button */
+    UIView *buttonHoler = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
+    UIButton *backButton = [UIButton buttonWithType: UIButtonTypeCustom];
+    [backButton setBackgroundImage: [UIImage imageNamed: @"buttonBack.png"]  forState:UIControlStateNormal];
+    [backButton setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
+    [backButton setTitle: NSLocalizedString(@"Back", nil) forState:UIControlStateNormal];
+    backButton.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
+    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [backButton setFrame:CGRectMake(0, 2, 60, 34)];
+    backButton.contentEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0);
+    backButton.titleLabel.textAlignment = UITextAlignmentCenter;
+    [buttonHoler addSubview: backButton];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler];
+    
     
     assets = [[NSMutableArray alloc] init];
     [self.view addSubview:self.tableView];
@@ -172,6 +197,10 @@
     library = [[ALAssetsLibrary alloc] init];
     [self loadAlbumsFromGallery];
     
+}
+
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

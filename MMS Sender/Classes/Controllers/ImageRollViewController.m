@@ -43,7 +43,7 @@
 
 - (UIBarButtonItem *)edit {
     if(_edit == nil) {
-        _edit = [[UIBarButtonItem alloc] initWithTitle:@"Wgraj" style:UIBarButtonItemStylePlain target:self action:@selector(uploadAllSelectedImages)];
+        _edit = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStylePlain target:self action:@selector(uploadAllSelectedImages)];
         _edit.enabled = NO;
     }
     return _edit;
@@ -221,9 +221,19 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    self.navigationItem.title = @"Wybierz obraz";
+    self.navigationItem.title = @"Select image";
     [self.navigationItem setRightBarButtonItem:self.edit];
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    
+    /* title label */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 100, 30)];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0];
+    label.text = @"Select image";
+    self.navigationItem.titleView = label;
     
     /*
     UIImage *back = [[UIImage imageNamed:@"back" ] stretchableImageWithLeftCapWidth:15 topCapHeight:0];
