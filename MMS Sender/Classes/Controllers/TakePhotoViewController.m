@@ -45,6 +45,12 @@ static BOOL cameraViewWasShown;
     return _cameraPicker;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroundClear"]];
+    //self.view.backgroundColor = [UIColor blackColor];
+    [self performSelector:@selector(showImagePicker) withObject:self afterDelay:0.7];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -75,11 +81,6 @@ static BOOL cameraViewWasShown;
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     // Do any additional setup after loading the view from its nib.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.view.backgroundColor = [UIColor blackColor];
-    [self performSelector:@selector(showImagePicker) withObject:self afterDelay:0.7];
 }
 
 - (void)showImagePicker {

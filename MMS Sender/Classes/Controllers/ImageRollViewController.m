@@ -1,9 +1,9 @@
 //
-//  ImageRollViewController.m
+//  UploadViewController.m
 //  dysk
 //
-//  Created by Eugeniusz Keptia on 05.03.2013.
-//  Copyright (c) 2013 Droids on Roids. All rights reserved.
+//  Created by Eugeniusz Keptia on 18.02.2013.
+//  Copyright (c) 2013 Edzio27. All rights reserved.
 //
 
 #import "ImageRollViewController.h"
@@ -26,6 +26,8 @@
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIImageView *grayImageView;
 @property (nonatomic, strong) UIBarButtonItem *edit;
+@property (nonatomic, strong) UIButton *editButton;
+
 
 @end
 
@@ -41,9 +43,23 @@
     return self;
 }
 
+- (UIButton *)editButton {
+    if(_editButton == nil) {
+        _editButton = [UIButton buttonWithType: UIButtonTypeCustom];
+        [_editButton setBackgroundImage: [UIImage imageNamed: @"upload"]  forState:UIControlStateNormal];
+        [_editButton setTitleColor:[UIColor grayColor] forState: UIControlStateNormal];
+        [_editButton setTitle: NSLocalizedString(@"Send", nil) forState:UIControlStateNormal];
+        _editButton.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
+        [_editButton addTarget:self action:@selector(uploadAllSelectedImages) forControlEvents:UIControlEventTouchUpInside];
+        [_editButton setFrame:CGRectMake(0, 5, 60, 34)];
+        _editButton.titleLabel.textAlignment = UITextAlignmentCenter;
+    }
+    return _editButton;
+}
+
 - (UIBarButtonItem *)edit {
     if(_edit == nil) {
-        _edit = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStylePlain target:self action:@selector(uploadAllSelectedImages)];
+        _edit = [[UIBarButtonItem alloc] initWithCustomView:self.editButton];
         _edit.enabled = NO;
     }
     return _edit;
@@ -173,8 +189,12 @@
 - (void)updateEditButton {
     if(self.selectedImages.count > 0) {
         self.edit.enabled = YES;
+        [self.editButton setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
+
     } else {
         self.edit.enabled = NO;
+        [self.editButton setTitleColor:[UIColor grayColor] forState: UIControlStateNormal];
+
     }
 }
 
@@ -217,10 +237,13 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroundClear"]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     self.navigationItem.title = @"Select image";
 
     /* custom back button */
@@ -238,18 +261,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler];
     
     /* custom upload button */
-    UIView *buttonHoler1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
-    UIButton *backButton1 = [UIButton buttonWithType: UIButtonTypeCustom];
-    [backButton1 setBackgroundImage: [UIImage imageNamed: @"upload"]  forState:UIControlStateNormal];
-    [backButton1 setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
-    [backButton1 setTitle: NSLocalizedString(@"Send", nil) forState:UIControlStateNormal];
-    backButton1.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
-    [backButton1 addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    [backButton1 setFrame:CGRectMake(0, 5, 60, 34)];
-    //backButton1.contentEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0);
-    backButton1.titleLabel.textAlignment = UITextAlignmentCenter;
-    [buttonHoler1 addSubview: backButton1];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler1];
+    self.navigationItem.rightBarButtonItem = self.edit;
     
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB7E1C7616F9086700AF662C /* TakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7E1C7416F9086700AF662C /* TakePhotoViewController.m */; };
 		DB7E1C7716F9086700AF662C /* TakePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7E1C7516F9086700AF662C /* TakePhotoViewController.xib */; };
-		DB8EB6751739A5E5005F9704 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB6741739A5E5005F9704 /* background.png */; };
+		DB8EB6751739A5E5005F9704 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB6741739A5E5005F9704 /* background@2x.png */; };
 		DB8EB6771739A621005F9704 /* take_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB6761739A621005F9704 /* take_picture.png */; };
 		DB8EB6791739AB41005F9704 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB6781739AB41005F9704 /* select.png */; };
 		DB8EB67F1739B09F005F9704 /* tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB67E1739B09F005F9704 /* tabbar.png */; };
@@ -38,6 +38,12 @@
 		DB947AD216F7A92400733381 /* EKMMSSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB947AD016F7A92400733381 /* EKMMSSenderViewController.m */; };
 		DB947AD316F7A92400733381 /* EKMMSSenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB947AD116F7A92400733381 /* EKMMSSenderViewController.xib */; };
 		DB947AD616F7AC5300733381 /* UIImage+ScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB947AD516F7AC5300733381 /* UIImage+ScaleImage.m */; };
+		DBA14E1C173E7A27000E0829 /* RollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA14E1B173E7A27000E0829 /* RollCell.m */; };
+		DBA14E1E173E7A44000E0829 /* RollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E1D173E7A44000E0829 /* RollCell.xib */; };
+		DBA14E20173E8EE7000E0829 /* cell.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E1F173E8EE7000E0829 /* cell.png */; };
+		DBA14E22173E9F75000E0829 /* backgroundClear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E21173E9F75000E0829 /* backgroundClear@2x.png */; };
+		DBA14E28173EAA3E000E0829 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E27173EAA3E000E0829 /* icon.png */; };
+		DBA14E2A173EAA44000E0829 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E29173EAA44000E0829 /* icon@2x.png */; };
 		DBA85C26173AB4B700AC86F1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C25173AB4B700AC86F1 /* back.png */; };
 		DBA85C28173AB68200AC86F1 /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C27173AB68200AC86F1 /* upload.png */; };
 		DBFBB3AB171DE76B007FD75A /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFBB3AA171DE76B007FD75A /* header.png */; };
@@ -47,7 +53,7 @@
 		DB7E1C7316F9086700AF662C /* TakePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhotoViewController.h; sourceTree = "<group>"; };
 		DB7E1C7416F9086700AF662C /* TakePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePhotoViewController.m; sourceTree = "<group>"; };
 		DB7E1C7516F9086700AF662C /* TakePhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TakePhotoViewController.xib; sourceTree = "<group>"; };
-		DB8EB6741739A5E5005F9704 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		DB8EB6741739A5E5005F9704 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		DB8EB6761739A621005F9704 /* take_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_picture.png; sourceTree = "<group>"; };
 		DB8EB6781739AB41005F9704 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
 		DB8EB67E1739B09F005F9704 /* tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar.png; sourceTree = "<group>"; };
@@ -86,6 +92,13 @@
 		DB947AD116F7A92400733381 /* EKMMSSenderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKMMSSenderViewController.xib; sourceTree = "<group>"; };
 		DB947AD416F7AC5300733381 /* UIImage+ScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ScaleImage.h"; sourceTree = "<group>"; };
 		DB947AD516F7AC5300733381 /* UIImage+ScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ScaleImage.m"; sourceTree = "<group>"; };
+		DBA14E1A173E7A27000E0829 /* RollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollCell.h; sourceTree = "<group>"; };
+		DBA14E1B173E7A27000E0829 /* RollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollCell.m; sourceTree = "<group>"; };
+		DBA14E1D173E7A44000E0829 /* RollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RollCell.xib; sourceTree = "<group>"; };
+		DBA14E1F173E8EE7000E0829 /* cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell.png; sourceTree = "<group>"; };
+		DBA14E21173E9F75000E0829 /* backgroundClear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundClear@2x.png"; sourceTree = "<group>"; };
+		DBA14E27173EAA3E000E0829 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DBA14E29173EAA44000E0829 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		DBA85C25173AB4B700AC86F1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		DBA85C27173AB68200AC86F1 /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
 		DBFBB3AA171DE76B007FD75A /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
@@ -111,6 +124,8 @@
 		DB947A5216F7A39E00733381 = {
 			isa = PBXGroup;
 			children = (
+				DBA14E29173EAA44000E0829 /* icon@2x.png */,
+				DBA14E27173EAA3E000E0829 /* icon.png */,
 				DB94704E170B37BD003327DE /* QuartzCore.framework */,
 				DB947ACD16F7A85C00733381 /* MessageUI.framework */,
 				DB947AA216F7A48D00733381 /* AssetsLibrary.framework */,
@@ -141,6 +156,7 @@
 		DB947A6716F7A39E00733381 /* MMS Sender */ = {
 			isa = PBXGroup;
 			children = (
+				DBA14E19173E79FC000E0829 /* RollCell */,
 				DB947ABF16F7A48D00733381 /* Resources */,
 				DB947AA116F7A48D00733381 /* Helpers */,
 				DB947A9316F7A48600733381 /* Controllers */,
@@ -204,17 +220,29 @@
 		DB947ABF16F7A48D00733381 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBA14E1F173E8EE7000E0829 /* cell.png */,
 				DBA85C27173AB68200AC86F1 /* upload.png */,
 				DBA85C25173AB4B700AC86F1 /* back.png */,
 				DB8EB67E1739B09F005F9704 /* tabbar.png */,
 				DB8EB6781739AB41005F9704 /* select.png */,
 				DB8EB6761739A621005F9704 /* take_picture.png */,
-				DB8EB6741739A5E5005F9704 /* background.png */,
+				DB8EB6741739A5E5005F9704 /* background@2x.png */,
 				DBFBB3AA171DE76B007FD75A /* header.png */,
+				DBA14E21173E9F75000E0829 /* backgroundClear@2x.png */,
 				DB947AC416F7A51200733381 /* box-checked.png */,
 				DB947AC516F7A51200733381 /* check-box-list.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DBA14E19173E79FC000E0829 /* RollCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBA14E1A173E7A27000E0829 /* RollCell.h */,
+				DBA14E1B173E7A27000E0829 /* RollCell.m */,
+				DBA14E1D173E7A44000E0829 /* RollCell.xib */,
+			);
+			name = RollCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,12 +310,17 @@
 				DB947AD316F7A92400733381 /* EKMMSSenderViewController.xib in Resources */,
 				DB7E1C7716F9086700AF662C /* TakePhotoViewController.xib in Resources */,
 				DBFBB3AB171DE76B007FD75A /* header.png in Resources */,
-				DB8EB6751739A5E5005F9704 /* background.png in Resources */,
+				DB8EB6751739A5E5005F9704 /* background@2x.png in Resources */,
 				DB8EB6771739A621005F9704 /* take_picture.png in Resources */,
 				DB8EB6791739AB41005F9704 /* select.png in Resources */,
 				DB8EB67F1739B09F005F9704 /* tabbar.png in Resources */,
 				DBA85C26173AB4B700AC86F1 /* back.png in Resources */,
 				DBA85C28173AB68200AC86F1 /* upload.png in Resources */,
+				DBA14E1E173E7A44000E0829 /* RollCell.xib in Resources */,
+				DBA14E20173E8EE7000E0829 /* cell.png in Resources */,
+				DBA14E22173E9F75000E0829 /* backgroundClear@2x.png in Resources */,
+				DBA14E28173EAA3E000E0829 /* icon.png in Resources */,
+				DBA14E2A173EAA44000E0829 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +340,7 @@
 				DB947AD216F7A92400733381 /* EKMMSSenderViewController.m in Sources */,
 				DB947AD616F7AC5300733381 /* UIImage+ScaleImage.m in Sources */,
 				DB7E1C7616F9086700AF662C /* TakePhotoViewController.m in Sources */,
+				DBA14E1C173E7A27000E0829 /* RollCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

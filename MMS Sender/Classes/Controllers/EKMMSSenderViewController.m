@@ -31,10 +31,13 @@
     return _picker;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroundClear"]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     
     /* title label */
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 100, 30)];

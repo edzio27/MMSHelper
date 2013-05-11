@@ -16,10 +16,24 @@
 @interface EKViewController ()
 
 @property (nonatomic, strong) UILabel *author;
+@property (nonatomic, strong) UILabel *tutorialLabel;
 
 @end
 
 @implementation EKViewController
+
+- (UILabel *)tutorialLabel {
+    if(_tutorialLabel == nil) {
+        _tutorialLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, 320, 30)];
+        _tutorialLabel.backgroundColor = [UIColor clearColor];
+        _tutorialLabel.font = [UIFont boldSystemFontOfSize:20.0];
+        _tutorialLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        _tutorialLabel.textAlignment = NSTextAlignmentCenter;
+        _tutorialLabel.textColor = [UIColor colorWithRed:0.996 green:0.788 blue:0.027 alpha:1.0];
+        _tutorialLabel.text = @"Choose source";
+    }
+    return _tutorialLabel;
+}
 
 - (UILabel *)author {
     if(_author == nil) {
@@ -35,7 +49,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    
+    [self.view addSubview:self.tutorialLabel];
     self.navigationItem.title = @"MMS Sender";
     
     /* title label */
@@ -54,6 +69,11 @@
     //[self.view addSubview:self.author];
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

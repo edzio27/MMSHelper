@@ -2,13 +2,15 @@
 //  UploadViewController.m
 //  dysk
 //
-//  Created by Maciej Gad on 18.02.2013.
-//  Copyright (c) 2013 Droids on Roids. All rights reserved.
+//  Created by Eugeniusz Keptia on 18.02.2013.
+//  Copyright (c) 2013 Edzio27. All rights reserved.
 //
 
 #import "UploadViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ImageRollViewController.h"
+#import "RollCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface UploadViewController () {
     NSMutableArray *assets;
@@ -17,7 +19,6 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, weak) NSMutableArray *assets;
-@property (nonatomic, strong) UIBarButtonItem *edit;
 @property (nonatomic, strong) NSMutableArray *selectedImages;
 
 @end
@@ -40,41 +41,28 @@
     return _selectedImages;
 }
 
-- (UIBarButtonItem *)edit {
-    if(_edit == nil) {
-        _edit = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStylePlain target:self action:@selector(uploadAllSelectedImages)];
-        [_edit setImage:[UIImage imageNamed:@"upload"]];
-        _edit.enabled = NO;
-    }
-    return _edit;
-}
-
 - (void)uploadAllSelectedImages {
     [self.selectedImages removeAllObjects];
-}
-
-- (void)updateEditButton {
-    if(self.selectedImages.count > 0) {
-        self.edit.enabled = YES;
-    } else {
-        self.edit.enabled = NO;
-    }
 }
 
 #pragma mark tableView methods
 
 - (UITableView *)tableView {
     if(_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10, 320, [UIScreen mainScreen].bounds.size.height
                                                                    - self.navigationController.navigationBar.frame.size.height
                                                                    - self.tabBarController.tabBar.frame.size.height
-                                                                   - 34)];
+                                                                   - 24)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 78;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -86,17 +74,47 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
     
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    RollCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil){
+        
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"RollCell" owner:nil options:nil];
+        for(id currentObject in topLevelObjects)
+        {
+            if([currentObject isKindOfClass:[RollCell class]])
+            {
+                cell = (RollCell *)currentObject;
+                break;
+            }
+        }
     }
+    
+    /* define background for cell */
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell"]];
+    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell"]];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     ALAssetsGroup *group = (ALAssetsGroup*)[assets objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ ",[group valueForProperty:ALAssetsGroupPropertyName]];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    [cell.imageView setImage:[UIImage imageWithCGImage:[(ALAssetsGroup*)[assets objectAtIndex:indexPath.row] posterImage]]];
+    
+    /* thumbnail view */
+    cell.thumbnailView.image = [UIImage imageWithCGImage:[(ALAssetsGroup*)[assets objectAtIndex:indexPath.row] posterImage]];
+    cell.thumbnailView.transform = CGAffineTransformMakeRotation(-M_PI/18);
+    cell.thumbnailView.layer.shouldRasterize = YES;
+    [cell.thumbnailView.layer setBorderColor: [[UIColor blackColor] CGColor]];
+    
+    /* label text */
+    cell.nameLabel.font = [UIFont boldSystemFontOfSize:18.0];
+    cell.nameLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    cell.nameLabel.textAlignment = NSTextAlignmentLeft;
+    cell.nameLabel.textColor = [UIColor colorWithRed:0.996 green:0.788 blue:0.027 alpha:1.0];
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@ ",[group valueForProperty:ALAssetsGroupPropertyName]];
+    
+    /* amount label */
+    cell.amountLabel.font = [UIFont boldSystemFontOfSize:12.0];
+    cell.amountLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    cell.amountLabel.textAlignment = NSTextAlignmentLeft;
+    cell.amountLabel.textColor = [UIColor grayColor];
+    cell.amountLabel.text = [NSString stringWithFormat:@"%d photos", [(ALAssetsGroup*)[assets objectAtIndex:indexPath.row] numberOfAssets]];
     
     return cell;
 }
@@ -154,15 +172,13 @@
 #pragma end
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self updateEditButton];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"backgroundClear"]];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     self.navigationItem.title = @"Select roll";
-    //[self.navigationItem setRightBarButtonItem:self.edit];
     
     /* title label */
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 100, 30)];
@@ -187,21 +203,6 @@
     backButton.titleLabel.textAlignment = UITextAlignmentCenter;
     [buttonHoler addSubview: backButton];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler];
-    
-    /* custom upload button */
-    UIView *buttonHoler1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
-    UIButton *backButton1 = [UIButton buttonWithType: UIButtonTypeCustom];
-    [backButton1 setBackgroundImage: [UIImage imageNamed: @"upload"]  forState:UIControlStateNormal];
-    [backButton1 setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
-    [backButton1 setTitle: NSLocalizedString(@"Send", nil) forState:UIControlStateNormal];
-    backButton1.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
-    [backButton1 addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    [backButton1 setFrame:CGRectMake(0, 5, 60, 34)];
-    //backButton1.contentEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0);
-    backButton1.titleLabel.textAlignment = UITextAlignmentCenter;
-    [buttonHoler1 addSubview: backButton1];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler1];
-    
     
     assets = [[NSMutableArray alloc] init];
     [self.view addSubview:self.tableView];
