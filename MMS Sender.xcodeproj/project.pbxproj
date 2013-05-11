@@ -45,6 +45,8 @@
 		DBA14E28173EAA3E000E0829 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E27173EAA3E000E0829 /* icon.png */; };
 		DBA14E2A173EAA44000E0829 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E29173EAA44000E0829 /* icon@2x.png */; };
 		DBA14E4B173EC842000E0829 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E4D173EC842000E0829 /* Localizable.strings */; };
+		DBA14E54173ECBFB000E0829 /* select_pl.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E52173ECBFB000E0829 /* select_pl.png */; };
+		DBA14E55173ECBFB000E0829 /* take_picture_pl.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E53173ECBFB000E0829 /* take_picture_pl.png */; };
 		DBA85C26173AB4B700AC86F1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C25173AB4B700AC86F1 /* back.png */; };
 		DBA85C28173AB68200AC86F1 /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C27173AB68200AC86F1 /* upload.png */; };
 		DBFBB3AB171DE76B007FD75A /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFBB3AA171DE76B007FD75A /* header.png */; };
@@ -105,6 +107,8 @@
 		DBA14E4F173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/EKViewController_iPhone.xib; sourceTree = "<group>"; };
 		DBA14E50173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/EKViewController_iPad.xib; sourceTree = "<group>"; };
 		DBA14E51173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBA14E52173ECBFB000E0829 /* select_pl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_pl.png; sourceTree = "<group>"; };
+		DBA14E53173ECBFB000E0829 /* take_picture_pl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_picture_pl.png; sourceTree = "<group>"; };
 		DBA85C25173AB4B700AC86F1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		DBA85C27173AB68200AC86F1 /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
 		DBFBB3AA171DE76B007FD75A /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 		DB947ABF16F7A48D00733381 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBA14E52173ECBFB000E0829 /* select_pl.png */,
+				DBA14E53173ECBFB000E0829 /* take_picture_pl.png */,
 				DBA14E1F173E8EE7000E0829 /* cell.png */,
 				DBA85C27173AB68200AC86F1 /* upload.png */,
 				DBA85C25173AB4B700AC86F1 /* back.png */,
@@ -330,6 +336,8 @@
 				DBA14E28173EAA3E000E0829 /* icon.png in Resources */,
 				DBA14E2A173EAA44000E0829 /* icon@2x.png in Resources */,
 				DBA14E4B173EC842000E0829 /* Localizable.strings in Resources */,
+				DBA14E54173ECBFB000E0829 /* select_pl.png in Resources */,
+				DBA14E55173ECBFB000E0829 /* take_picture_pl.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

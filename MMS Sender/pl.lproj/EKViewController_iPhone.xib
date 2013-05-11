@@ -63,7 +63,7 @@
 						<reference key="IBUINormalTitleShadowColor" ref="870048408"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">take_picture.png</string>
+							<string key="NSResourceName">take_picture_pl.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="613088201">
 							<int key="type">2</int>
@@ -81,6 +81,7 @@
 						<string key="NSFrame">{{168, 191}, {140, 42}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="870048408"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -95,7 +96,7 @@
 						<reference key="IBUINormalTitleShadowColor" ref="870048408"/>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">select.png</string>
+							<string key="NSResourceName">select_pl.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="613088201"/>
 						<reference key="IBUIFont" ref="857502057"/>
@@ -487,8 +488,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="select.png">{226, 64}</string>
-			<string key="take_picture.png">{226, 65}</string>
+			<string key="select_pl.png">{228, 64}</string>
+			<string key="take_picture_pl.png">{228, 64}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
