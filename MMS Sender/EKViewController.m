@@ -30,7 +30,7 @@
         _tutorialLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
         _tutorialLabel.textAlignment = NSTextAlignmentCenter;
         _tutorialLabel.textColor = [UIColor colorWithRed:0.996 green:0.788 blue:0.027 alpha:1.0];
-        _tutorialLabel.text = @"Choose source";
+        _tutorialLabel.text = NSLocalizedString(@"Choose source", @"");
     }
     return _tutorialLabel;
 }

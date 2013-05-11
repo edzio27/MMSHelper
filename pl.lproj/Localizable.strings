@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  MMS Sender
+
+  Created by Edzio27 Edzio27 on 11.05.2013.
+  Copyright (c) 2013 edzio27. All rights reserved.
+*/
+
+"Choose source" = "Wybierz źródło";
+"Back button" = "Wstecz";
+"Select roll" = "Wybierz rolkę";
+"Select image" = "Wybierz zdjęcie";
+"Send" = "Wyślij";
+"Photo amount" = "zdjęć";

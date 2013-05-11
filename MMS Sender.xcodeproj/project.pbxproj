@@ -44,6 +44,7 @@
 		DBA14E22173E9F75000E0829 /* backgroundClear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E21173E9F75000E0829 /* backgroundClear@2x.png */; };
 		DBA14E28173EAA3E000E0829 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E27173EAA3E000E0829 /* icon.png */; };
 		DBA14E2A173EAA44000E0829 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E29173EAA44000E0829 /* icon@2x.png */; };
+		DBA14E4B173EC842000E0829 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E4D173EC842000E0829 /* Localizable.strings */; };
 		DBA85C26173AB4B700AC86F1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C25173AB4B700AC86F1 /* back.png */; };
 		DBA85C28173AB68200AC86F1 /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C27173AB68200AC86F1 /* upload.png */; };
 		DBFBB3AB171DE76B007FD75A /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFBB3AA171DE76B007FD75A /* header.png */; };
@@ -99,6 +100,11 @@
 		DBA14E21173E9F75000E0829 /* backgroundClear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundClear@2x.png"; sourceTree = "<group>"; };
 		DBA14E27173EAA3E000E0829 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DBA14E29173EAA44000E0829 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		DBA14E4C173EC842000E0829 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBA14E4E173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBA14E4F173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/EKViewController_iPhone.xib; sourceTree = "<group>"; };
+		DBA14E50173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/EKViewController_iPad.xib; sourceTree = "<group>"; };
+		DBA14E51173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DBA85C25173AB4B700AC86F1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		DBA85C27173AB68200AC86F1 /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
 		DBFBB3AA171DE76B007FD75A /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 		DB947A5216F7A39E00733381 = {
 			isa = PBXGroup;
 			children = (
+				DBA14E4D173EC842000E0829 /* Localizable.strings */,
 				DBA14E29173EAA44000E0829 /* icon@2x.png */,
 				DBA14E27173EAA3E000E0829 /* icon.png */,
 				DB94704E170B37BD003327DE /* QuartzCore.framework */,
@@ -281,6 +288,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				pl,
 			);
 			mainGroup = DB947A5216F7A39E00733381;
 			productRefGroup = DB947A5E16F7A39E00733381 /* Products */;
@@ -321,6 +329,7 @@
 				DBA14E22173E9F75000E0829 /* backgroundClear@2x.png in Resources */,
 				DBA14E28173EAA3E000E0829 /* icon.png in Resources */,
 				DBA14E2A173EAA44000E0829 /* icon@2x.png in Resources */,
+				DBA14E4B173EC842000E0829 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +360,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB947A6B16F7A39E00733381 /* en */,
+				DBA14E51173EC885000E0829 /* pl */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -359,6 +369,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB947A7D16F7A39E00733381 /* en */,
+				DBA14E4F173EC885000E0829 /* pl */,
 			);
 			name = EKViewController_iPhone.xib;
 			sourceTree = "<group>";
@@ -367,8 +378,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB947A8016F7A39E00733381 /* en */,
+				DBA14E50173EC885000E0829 /* pl */,
 			);
 			name = EKViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		DBA14E4D173EC842000E0829 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBA14E4C173EC842000E0829 /* en */,
+				DBA14E4E173EC885000E0829 /* pl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

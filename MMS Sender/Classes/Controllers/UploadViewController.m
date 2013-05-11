@@ -114,7 +114,7 @@
     cell.amountLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     cell.amountLabel.textAlignment = NSTextAlignmentLeft;
     cell.amountLabel.textColor = [UIColor grayColor];
-    cell.amountLabel.text = [NSString stringWithFormat:@"%d photos", [(ALAssetsGroup*)[assets objectAtIndex:indexPath.row] numberOfAssets]];
+    cell.amountLabel.text = [NSString stringWithFormat:@"%d %@", [(ALAssetsGroup*)[assets objectAtIndex:indexPath.row] numberOfAssets], NSLocalizedString(@"Photo amount", @"")];
     
     return cell;
 }
@@ -178,7 +178,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Select roll";
+    self.navigationItem.title = NSLocalizedString(@"Select roll", @"");
     
     /* title label */
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 100, 30)];
@@ -187,7 +187,7 @@
     label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0];
-    label.text = @"Select roll";
+    label.text = NSLocalizedString(@"Select roll", @"");
     self.navigationItem.titleView = label;
     
     /* custom back button */
@@ -195,7 +195,7 @@
     UIButton *backButton = [UIButton buttonWithType: UIButtonTypeCustom];
     [backButton setBackgroundImage: [UIImage imageNamed: @"back"]  forState:UIControlStateNormal];
     [backButton setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
-    [backButton setTitle: NSLocalizedString(@"Back", nil) forState:UIControlStateNormal];
+    [backButton setTitle: NSLocalizedString(@"Back button", nil) forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
     [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [backButton setFrame:CGRectMake(0, 5, 60, 34)];

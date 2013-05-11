@@ -244,14 +244,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Select image";
+    self.navigationItem.title = NSLocalizedString(@"Select image", @"");
 
     /* custom back button */
     UIView *buttonHoler = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
     UIButton *backButton = [UIButton buttonWithType: UIButtonTypeCustom];
     [backButton setBackgroundImage: [UIImage imageNamed: @"back"]  forState:UIControlStateNormal];
     [backButton setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
-    [backButton setTitle: NSLocalizedString(@"Back", nil) forState:UIControlStateNormal];
+    [backButton setTitle: NSLocalizedString(@"Back button", nil) forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
     [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [backButton setFrame:CGRectMake(0, 5, 60, 34)];
@@ -272,7 +272,7 @@
     label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0];
-    label.text = @"Select image";
+    label.text = NSLocalizedString(@"Select image", @"");
     self.navigationItem.titleView = label;
     
     self.mutableAssets = tempArray;
