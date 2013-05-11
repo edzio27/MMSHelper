@@ -62,7 +62,7 @@ static BOOL cameraViewWasShown;
     label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0];
-    label.text = @"Photo";
+    label.text = NSLocalizedString(@"Photo", @"");
     self.navigationItem.titleView = label;
     
     /* custom back button */

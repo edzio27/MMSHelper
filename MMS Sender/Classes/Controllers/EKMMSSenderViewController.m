@@ -49,12 +49,29 @@
     label.text = @"Sender";
     self.navigationItem.titleView = label;
     
+    
+    /* custom back button */
+    UIView *buttonHoler = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 44)];
+    UIButton *backButton = [UIButton buttonWithType: UIButtonTypeCustom];
+    [backButton setBackgroundImage: [UIImage imageNamed: @"back"]  forState:UIControlStateNormal];
+    [backButton setTitleColor:[UIColor colorWithRed:0.525 green:0.518 blue:0.969 alpha:1.0] forState: UIControlStateNormal];
+    [backButton setTitle: NSLocalizedString(@"Back button", nil) forState:UIControlStateNormal];
+    backButton.titleLabel.font = [UIFont boldSystemFontOfSize: 13];
+    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [backButton setFrame:CGRectMake(0, 5, 60, 34)];
+    backButton.contentEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 0.0);
+    backButton.titleLabel.textAlignment = UITextAlignmentCenter;
+    [buttonHoler addSubview: backButton];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: buttonHoler];
+    
+
+    
     [self performSelector:@selector(showAlert) withObject:self afterDelay:0.2];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)showAlert {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Zmieniono rozmiar" message:[NSString stringWithFormat:@"%lu kB", (unsigned long)self.imageToSend.length/1000] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Size changed", @"") message:[NSString stringWithFormat:@"%lu kB", (unsigned long)self.imageToSend.length/1000] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     alertView.tag = 111;
     [alertView show];
 }
