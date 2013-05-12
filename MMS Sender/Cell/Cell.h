@@ -12,6 +12,7 @@ __unused  static NSString *cellIdentifier = @"myCell";
 
 @interface Cell : PSUICollectionViewCell
 
-@property (strong, nonatomic) UILabel* label;
+@property (strong, nonatomic) UIImageView* imageView;
+@property (nonatomic, strong) UILabel *tutorialLabel;
 
 @end

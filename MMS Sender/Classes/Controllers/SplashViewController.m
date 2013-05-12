@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) UIButton *startButton;
+@property (nonatomic, strong) NSMutableArray *imageArray;
+@property (nonatomic, strong) NSMutableArray *tutorialArray;
 
 @end
 
@@ -26,6 +28,26 @@
         // Custom initialization
     }
     return self;
+}
+
+- (NSMutableArray *)imageArray {
+    if(_imageArray == nil) {
+        _imageArray = [[NSMutableArray alloc] init];
+        [_imageArray addObject:@"tutorial1"];
+        [_imageArray addObject:@"tutorial2"];
+        [_imageArray addObject:@"tutorial3"];
+    }
+    return _imageArray;
+}
+
+- (NSMutableArray *)tutorialArray {
+    if(_tutorialArray == nil) {
+        _tutorialArray = [[NSMutableArray alloc] init];
+        [_tutorialArray addObject:@"Wybierz obraz wśród zdjęc w rolce"];
+        [_tutorialArray addObject:@"lub zrób zdjęcie"];
+        [_tutorialArray addObject:@"podwojnie kliknij zeby wkleic zdjęcie"];
+    }
+    return _tutorialArray;
 }
 
 - (UIButton *)startButton {
@@ -68,6 +90,8 @@
 
 - (PSUICollectionViewCell *)collectionView:(PSUICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Cell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"myCell" forIndexPath:indexPath];
+    cell.imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
+    cell.tutorialLabel.text = [self.tutorialArray objectAtIndex:indexPath.row];
     return cell;
 }
 

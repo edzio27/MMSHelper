@@ -66,6 +66,9 @@
 		DBC862DD173FE16800599D27 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862DB173FE16800599D27 /* SplashViewController.m */; };
 		DBC862DE173FE16800599D27 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC862DC173FE16800599D27 /* SplashViewController.xib */; };
 		DBC862E2173FE7E600599D27 /* start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC862E1173FE7E600599D27 /* start@2x.png */; };
+		DBC862E61740072700599D27 /* tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC862E31740072700599D27 /* tutorial1.png */; };
+		DBC862E71740072700599D27 /* tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC862E41740072700599D27 /* tutorial2.png */; };
+		DBC862E81740072700599D27 /* tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC862E51740072700599D27 /* tutorial3.png */; };
 		DBFBB3AB171DE76B007FD75A /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFBB3AA171DE76B007FD75A /* header.png */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +165,9 @@
 		DBC862DB173FE16800599D27 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		DBC862DC173FE16800599D27 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		DBC862E1173FE7E600599D27 /* start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start@2x.png"; sourceTree = "<group>"; };
+		DBC862E31740072700599D27 /* tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial1.png; sourceTree = "<group>"; };
+		DBC862E41740072700599D27 /* tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial2.png; sourceTree = "<group>"; };
+		DBC862E51740072700599D27 /* tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial3.png; sourceTree = "<group>"; };
 		DBFBB3AA171DE76B007FD75A /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +293,9 @@
 		DB947ABF16F7A48D00733381 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBC862E31740072700599D27 /* tutorial1.png */,
+				DBC862E41740072700599D27 /* tutorial2.png */,
+				DBC862E51740072700599D27 /* tutorial3.png */,
 				DBC862E1173FE7E600599D27 /* start@2x.png */,
 				DBA14E52173ECBFB000E0829 /* select_pl.png */,
 				DBA14E53173ECBFB000E0829 /* take_picture_pl.png */,
@@ -449,6 +458,9 @@
 				DBA14E55173ECBFB000E0829 /* take_picture_pl.png in Resources */,
 				DBC862DE173FE16800599D27 /* SplashViewController.xib in Resources */,
 				DBC862E2173FE7E600599D27 /* start@2x.png in Resources */,
+				DBC862E61740072700599D27 /* tutorial1.png in Resources */,
+				DBC862E71740072700599D27 /* tutorial2.png in Resources */,
+				DBC862E81740072700599D27 /* tutorial3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
