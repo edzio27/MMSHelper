@@ -11,7 +11,7 @@
 #import "TakePhotoViewController.h"
 #import "EKAppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "SplashViewController.h"
 
 @interface EKViewController ()
 
@@ -68,6 +68,8 @@
     //self.cameraButton.backgroundColor = [UIColor blackColor];
     //[self.view addSubview:self.author];
     // Do any additional setup after loading the view, typically from a nib.
+    SplashViewController *splash = [[SplashViewController alloc] init];
+    [self presentModalViewController:splash animated:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

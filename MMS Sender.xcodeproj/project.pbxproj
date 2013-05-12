@@ -49,6 +49,23 @@
 		DBA14E55173ECBFB000E0829 /* take_picture_pl.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA14E53173ECBFB000E0829 /* take_picture_pl.png */; };
 		DBA85C26173AB4B700AC86F1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C25173AB4B700AC86F1 /* back.png */; };
 		DBA85C28173AB68200AC86F1 /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = DBA85C27173AB68200AC86F1 /* upload.png */; };
+		DBC862C4173FB5D700599D27 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862A9173FB5D700599D27 /* NSIndexPath+PSTCollectionViewAdditions.m */; };
+		DBC862C5173FB5D700599D27 /* PSTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862AB173FB5D700599D27 /* PSTCollectionView.m */; };
+		DBC862C6173FB5D700599D27 /* PSTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862AD173FB5D700599D27 /* PSTCollectionViewCell.m */; };
+		DBC862C7173FB5D700599D27 /* PSTCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862B0173FB5D700599D27 /* PSTCollectionViewController.m */; };
+		DBC862C8173FB5D700599D27 /* PSTCollectionViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862B2173FB5D700599D27 /* PSTCollectionViewData.m */; };
+		DBC862C9173FB5D700599D27 /* PSTCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862B4173FB5D700599D27 /* PSTCollectionViewFlowLayout.m */; };
+		DBC862CA173FB5D700599D27 /* PSTCollectionViewItemKey.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862B6173FB5D700599D27 /* PSTCollectionViewItemKey.m */; };
+		DBC862CB173FB5D700599D27 /* PSTCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862B9173FB5D700599D27 /* PSTCollectionViewLayout.m */; };
+		DBC862CC173FB5D700599D27 /* PSTCollectionViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862BB173FB5D700599D27 /* PSTCollectionViewUpdateItem.m */; };
+		DBC862CD173FB5D700599D27 /* PSTGridLayoutInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862BD173FB5D700599D27 /* PSTGridLayoutInfo.m */; };
+		DBC862CE173FB5D700599D27 /* PSTGridLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862BF173FB5D700599D27 /* PSTGridLayoutItem.m */; };
+		DBC862CF173FB5D700599D27 /* PSTGridLayoutRow.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862C1173FB5D700599D27 /* PSTGridLayoutRow.m */; };
+		DBC862D0173FB5D700599D27 /* PSTGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862C3173FB5D700599D27 /* PSTGridLayoutSection.m */; };
+		DBC862D9173FDE7800599D27 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862D8173FDE7800599D27 /* Cell.m */; };
+		DBC862DD173FE16800599D27 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC862DB173FE16800599D27 /* SplashViewController.m */; };
+		DBC862DE173FE16800599D27 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC862DC173FE16800599D27 /* SplashViewController.xib */; };
+		DBC862E2173FE7E600599D27 /* start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC862E1173FE7E600599D27 /* start@2x.png */; };
 		DBFBB3AB171DE76B007FD75A /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFBB3AA171DE76B007FD75A /* header.png */; };
 /* End PBXBuildFile section */
 
@@ -102,8 +119,8 @@
 		DBA14E21173E9F75000E0829 /* backgroundClear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundClear@2x.png"; sourceTree = "<group>"; };
 		DBA14E27173EAA3E000E0829 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DBA14E29173EAA44000E0829 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		DBA14E4C173EC842000E0829 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DBA14E4E173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBA14E4C173EC842000E0829 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBA14E4E173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DBA14E4F173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/EKViewController_iPhone.xib; sourceTree = "<group>"; };
 		DBA14E50173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = pl.lproj/EKViewController_iPad.xib; sourceTree = "<group>"; };
 		DBA14E51173EC885000E0829 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -111,6 +128,40 @@
 		DBA14E53173ECBFB000E0829 /* take_picture_pl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_picture_pl.png; sourceTree = "<group>"; };
 		DBA85C25173AB4B700AC86F1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		DBA85C27173AB68200AC86F1 /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
+		DBC862A8173FB5D700599D27 /* NSIndexPath+PSTCollectionViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+PSTCollectionViewAdditions.h"; sourceTree = "<group>"; };
+		DBC862A9173FB5D700599D27 /* NSIndexPath+PSTCollectionViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+PSTCollectionViewAdditions.m"; sourceTree = "<group>"; };
+		DBC862AA173FB5D700599D27 /* PSTCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionView.h; sourceTree = "<group>"; };
+		DBC862AB173FB5D700599D27 /* PSTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCollectionView.m; sourceTree = "<group>"; };
+		DBC862AC173FB5D700599D27 /* PSTCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionViewCell.h; sourceTree = "<group>"; };
+		DBC862AD173FB5D700599D27 /* PSTCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCollectionViewCell.m; sourceTree = "<group>"; };
+		DBC862AE173FB5D700599D27 /* PSTCollectionViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionViewCommon.h; sourceTree = "<group>"; };
+		DBC862AF173FB5D700599D27 /* PSTCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionViewController.h; sourceTree = "<group>"; };
+		DBC862B0173FB5D700599D27 /* PSTCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCollectionViewController.m; sourceTree = "<group>"; };
+		DBC862B1173FB5D700599D27 /* PSTCollectionViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionViewData.h; sourceTree = "<group>"; };
+		DBC862B2173FB5D700599D27 /* PSTCollectionViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCollectionViewData.m; sourceTree = "<group>"; };
+		DBC862B3173FB5D700599D27 /* PSTCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		DBC862B4173FB5D700599D27 /* PSTCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		DBC862B5173FB5D700599D27 /* PSTCollectionViewItemKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionViewItemKey.h; sourceTree = "<group>"; };
+		DBC862B6173FB5D700599D27 /* PSTCollectionViewItemKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCollectionViewItemKey.m; sourceTree = "<group>"; };
+		DBC862B7173FB5D700599D27 /* PSTCollectionViewLayout+Internals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PSTCollectionViewLayout+Internals.h"; sourceTree = "<group>"; };
+		DBC862B8173FB5D700599D27 /* PSTCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionViewLayout.h; sourceTree = "<group>"; };
+		DBC862B9173FB5D700599D27 /* PSTCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCollectionViewLayout.m; sourceTree = "<group>"; };
+		DBC862BA173FB5D700599D27 /* PSTCollectionViewUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCollectionViewUpdateItem.h; sourceTree = "<group>"; };
+		DBC862BB173FB5D700599D27 /* PSTCollectionViewUpdateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCollectionViewUpdateItem.m; sourceTree = "<group>"; };
+		DBC862BC173FB5D700599D27 /* PSTGridLayoutInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTGridLayoutInfo.h; sourceTree = "<group>"; };
+		DBC862BD173FB5D700599D27 /* PSTGridLayoutInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGridLayoutInfo.m; sourceTree = "<group>"; };
+		DBC862BE173FB5D700599D27 /* PSTGridLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTGridLayoutItem.h; sourceTree = "<group>"; };
+		DBC862BF173FB5D700599D27 /* PSTGridLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGridLayoutItem.m; sourceTree = "<group>"; };
+		DBC862C0173FB5D700599D27 /* PSTGridLayoutRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTGridLayoutRow.h; sourceTree = "<group>"; };
+		DBC862C1173FB5D700599D27 /* PSTGridLayoutRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGridLayoutRow.m; sourceTree = "<group>"; };
+		DBC862C2173FB5D700599D27 /* PSTGridLayoutSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTGridLayoutSection.h; sourceTree = "<group>"; };
+		DBC862C3173FB5D700599D27 /* PSTGridLayoutSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGridLayoutSection.m; sourceTree = "<group>"; };
+		DBC862D7173FDE7800599D27 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		DBC862D8173FDE7800599D27 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		DBC862DA173FE16800599D27 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		DBC862DB173FE16800599D27 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		DBC862DC173FE16800599D27 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		DBC862E1173FE7E600599D27 /* start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start@2x.png"; sourceTree = "<group>"; };
 		DBFBB3AA171DE76B007FD75A /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +218,8 @@
 		DB947A6716F7A39E00733381 /* MMS Sender */ = {
 			isa = PBXGroup;
 			children = (
+				DBC862D6173FDE7800599D27 /* Cell */,
+				DBC862A6173FB5D700599D27 /* External */,
 				DBA14E19173E79FC000E0829 /* RollCell */,
 				DB947ABF16F7A48D00733381 /* Resources */,
 				DB947AA116F7A48D00733381 /* Helpers */,
@@ -213,6 +266,9 @@
 				DB7E1C7316F9086700AF662C /* TakePhotoViewController.h */,
 				DB7E1C7416F9086700AF662C /* TakePhotoViewController.m */,
 				DB7E1C7516F9086700AF662C /* TakePhotoViewController.xib */,
+				DBC862DA173FE16800599D27 /* SplashViewController.h */,
+				DBC862DB173FE16800599D27 /* SplashViewController.m */,
+				DBC862DC173FE16800599D27 /* SplashViewController.xib */,
 			);
 			name = Controllers;
 			path = Classes/Controllers;
@@ -231,6 +287,7 @@
 		DB947ABF16F7A48D00733381 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBC862E1173FE7E600599D27 /* start@2x.png */,
 				DBA14E52173ECBFB000E0829 /* select_pl.png */,
 				DBA14E53173ECBFB000E0829 /* take_picture_pl.png */,
 				DBA14E1F173E8EE7000E0829 /* cell.png */,
@@ -256,6 +313,58 @@
 				DBA14E1D173E7A44000E0829 /* RollCell.xib */,
 			);
 			name = RollCell;
+			sourceTree = "<group>";
+		};
+		DBC862A6173FB5D700599D27 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				DBC862A7173FB5D700599D27 /* PSTCollectionView */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		DBC862A7173FB5D700599D27 /* PSTCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DBC862A8173FB5D700599D27 /* NSIndexPath+PSTCollectionViewAdditions.h */,
+				DBC862A9173FB5D700599D27 /* NSIndexPath+PSTCollectionViewAdditions.m */,
+				DBC862AA173FB5D700599D27 /* PSTCollectionView.h */,
+				DBC862AB173FB5D700599D27 /* PSTCollectionView.m */,
+				DBC862AC173FB5D700599D27 /* PSTCollectionViewCell.h */,
+				DBC862AD173FB5D700599D27 /* PSTCollectionViewCell.m */,
+				DBC862AE173FB5D700599D27 /* PSTCollectionViewCommon.h */,
+				DBC862AF173FB5D700599D27 /* PSTCollectionViewController.h */,
+				DBC862B0173FB5D700599D27 /* PSTCollectionViewController.m */,
+				DBC862B1173FB5D700599D27 /* PSTCollectionViewData.h */,
+				DBC862B2173FB5D700599D27 /* PSTCollectionViewData.m */,
+				DBC862B3173FB5D700599D27 /* PSTCollectionViewFlowLayout.h */,
+				DBC862B4173FB5D700599D27 /* PSTCollectionViewFlowLayout.m */,
+				DBC862B5173FB5D700599D27 /* PSTCollectionViewItemKey.h */,
+				DBC862B6173FB5D700599D27 /* PSTCollectionViewItemKey.m */,
+				DBC862B7173FB5D700599D27 /* PSTCollectionViewLayout+Internals.h */,
+				DBC862B8173FB5D700599D27 /* PSTCollectionViewLayout.h */,
+				DBC862B9173FB5D700599D27 /* PSTCollectionViewLayout.m */,
+				DBC862BA173FB5D700599D27 /* PSTCollectionViewUpdateItem.h */,
+				DBC862BB173FB5D700599D27 /* PSTCollectionViewUpdateItem.m */,
+				DBC862BC173FB5D700599D27 /* PSTGridLayoutInfo.h */,
+				DBC862BD173FB5D700599D27 /* PSTGridLayoutInfo.m */,
+				DBC862BE173FB5D700599D27 /* PSTGridLayoutItem.h */,
+				DBC862BF173FB5D700599D27 /* PSTGridLayoutItem.m */,
+				DBC862C0173FB5D700599D27 /* PSTGridLayoutRow.h */,
+				DBC862C1173FB5D700599D27 /* PSTGridLayoutRow.m */,
+				DBC862C2173FB5D700599D27 /* PSTGridLayoutSection.h */,
+				DBC862C3173FB5D700599D27 /* PSTGridLayoutSection.m */,
+			);
+			path = PSTCollectionView;
+			sourceTree = "<group>";
+		};
+		DBC862D6173FDE7800599D27 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DBC862D7173FDE7800599D27 /* Cell.h */,
+				DBC862D8173FDE7800599D27 /* Cell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +447,8 @@
 				DBA14E4B173EC842000E0829 /* Localizable.strings in Resources */,
 				DBA14E54173ECBFB000E0829 /* select_pl.png in Resources */,
 				DBA14E55173ECBFB000E0829 /* take_picture_pl.png in Resources */,
+				DBC862DE173FE16800599D27 /* SplashViewController.xib in Resources */,
+				DBC862E2173FE7E600599D27 /* start@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +469,21 @@
 				DB947AD616F7AC5300733381 /* UIImage+ScaleImage.m in Sources */,
 				DB7E1C7616F9086700AF662C /* TakePhotoViewController.m in Sources */,
 				DBA14E1C173E7A27000E0829 /* RollCell.m in Sources */,
+				DBC862C5173FB5D700599D27 /* PSTCollectionView.m in Sources */,
+				DBC862C7173FB5D700599D27 /* PSTCollectionViewController.m in Sources */,
+				DBC862CB173FB5D700599D27 /* PSTCollectionViewLayout.m in Sources */,
+				DBC862C8173FB5D700599D27 /* PSTCollectionViewData.m in Sources */,
+				DBC862C9173FB5D700599D27 /* PSTCollectionViewFlowLayout.m in Sources */,
+				DBC862CC173FB5D700599D27 /* PSTCollectionViewUpdateItem.m in Sources */,
+				DBC862CE173FB5D700599D27 /* PSTGridLayoutItem.m in Sources */,
+				DBC862CD173FB5D700599D27 /* PSTGridLayoutInfo.m in Sources */,
+				DBC862C4173FB5D700599D27 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
+				DBC862CF173FB5D700599D27 /* PSTGridLayoutRow.m in Sources */,
+				DBC862CA173FB5D700599D27 /* PSTCollectionViewItemKey.m in Sources */,
+				DBC862D0173FB5D700599D27 /* PSTGridLayoutSection.m in Sources */,
+				DBC862C6173FB5D700599D27 /* PSTCollectionViewCell.m in Sources */,
+				DBC862D9173FDE7800599D27 /* Cell.m in Sources */,
+				DBC862DD173FE16800599D27 /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
