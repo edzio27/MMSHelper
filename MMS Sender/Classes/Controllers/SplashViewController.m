@@ -43,9 +43,9 @@
 - (NSMutableArray *)tutorialArray {
     if(_tutorialArray == nil) {
         _tutorialArray = [[NSMutableArray alloc] init];
-        [_tutorialArray addObject:@"Wybierz obraz wśród zdjęc w rolce"];
+        [_tutorialArray addObject:@"Wybierz obraz wśród zdjęć"];
         [_tutorialArray addObject:@"lub zrób zdjęcie"];
-        [_tutorialArray addObject:@"podwojnie kliknij zeby wkleic zdjęcie"];
+        [_tutorialArray addObject:@"podwójnie kliknij zeby wkleić zdjęcie"];
     }
     return _tutorialArray;
 }
@@ -92,6 +92,15 @@
     Cell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"myCell" forIndexPath:indexPath];
     cell.imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
     cell.tutorialLabel.text = [self.tutorialArray objectAtIndex:indexPath.row];
+    if(indexPath.row == 0) {
+        cell.tutorialLabel.frame = CGRectMake(0, 55, 320, 50);
+    }
+    if(indexPath.row == 1) {
+        cell.tutorialLabel.frame = CGRectMake(0, 390, 320, 50);
+    }
+    if(indexPath.row == 2) {
+        cell.tutorialLabel.frame = CGRectMake(0, 390, 320, 50);
+    }
     return cell;
 }
 
