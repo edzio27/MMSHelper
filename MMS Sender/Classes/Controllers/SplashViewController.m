@@ -43,9 +43,9 @@
 - (NSMutableArray *)tutorialArray {
     if(_tutorialArray == nil) {
         _tutorialArray = [[NSMutableArray alloc] init];
-        [_tutorialArray addObject:@"Wybierz obraz wśród zdjęć"];
-        [_tutorialArray addObject:@"lub zrób zdjęcie"];
-        [_tutorialArray addObject:@"podwójnie kliknij zeby wkleić zdjęcie"];
+        [_tutorialArray addObject:NSLocalizedString(@"tutorial1", @"")];
+        [_tutorialArray addObject:NSLocalizedString(@"tutorial2", @"")];
+        [_tutorialArray addObject:NSLocalizedString(@"tutorial3", @"")];
     }
     return _tutorialArray;
 }
@@ -60,6 +60,8 @@
 }
 
 - (void)dismiss {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"YES" forKey:@"wasInTutorial"];
     [self dismissModalViewControllerAnimated:YES];
 }
 

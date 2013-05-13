@@ -65,11 +65,12 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"tabbar.png"] forBarMetrics:UIBarMetricsDefault];
     self.navigationItem.titleView = label;
 
-    //self.cameraButton.backgroundColor = [UIColor blackColor];
-    //[self.view addSubview:self.author];
-    // Do any additional setup after loading the view, typically from a nib.
-    SplashViewController *splash = [[SplashViewController alloc] init];
-    [self presentModalViewController:splash animated:NO];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(! [[defaults objectForKey:@"wasInTutorial"] isEqualToString:@"YES"]) {
+        SplashViewController *splash = [[SplashViewController alloc] init];
+        [self presentModalViewController:splash animated:NO];
+    }
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {

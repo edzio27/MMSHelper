@@ -14,3 +14,7 @@
 "Photo amount" = "photos";
 "Photo" = "Photo";
 "Size changed" = "Size changed";
+
+"tutorial1" = "Select from rolls..";
+"tutorial2" = "..or take a photo..";
+"tutorial3" = "..double tap to paste image!";

@@ -47,44 +47,44 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Controllers/SplashViewController.m"
-         timestampString = "390158459.426539"
+         timestampString = "390159511.129803"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144">
+         startingLineNumber = "146"
+         endingLineNumber = "146">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Controllers/SplashViewController.m"
-         timestampString = "390158459.426539"
+         timestampString = "390159511.129803"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "137"
-         endingLineNumber = "137">
+         startingLineNumber = "139"
+         endingLineNumber = "139">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Controllers/SplashViewController.m"
-         timestampString = "390158459.426539"
+         timestampString = "390159511.129803"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "155"
-         endingLineNumber = "155">
+         startingLineNumber = "157"
+         endingLineNumber = "157">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MMS Sender/Classes/Controllers/SplashViewController.m"
-         timestampString = "390074577.489847"
+         timestampString = "390159168.840526"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "62"
-         endingLineNumber = "62"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
          landmarkName = "-dismiss"
          landmarkType = "5">
       </FileBreakpoint>
