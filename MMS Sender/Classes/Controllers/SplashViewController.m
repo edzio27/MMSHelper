@@ -52,7 +52,7 @@
 
 - (UIButton *)startButton {
     if(_startButton == nil) {
-        _startButton = [[UIButton alloc] initWithFrame:CGRectMake(103, [[UIScreen mainScreen] bounds].size.height - 120, 114, 32)];
+        _startButton = [[UIButton alloc] initWithFrame:CGRectMake(103, [[UIScreen mainScreen] bounds].size.height - 90, 114, 32)];
         [_startButton setImage:[UIImage imageNamed:@"start"] forState:UIControlStateNormal];
         [_startButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -92,14 +92,23 @@
     Cell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"myCell" forIndexPath:indexPath];
     cell.imageView.image = [UIImage imageNamed:[self.imageArray objectAtIndex:indexPath.row]];
     cell.tutorialLabel.text = [self.tutorialArray objectAtIndex:indexPath.row];
+    
+    float height = [[UIScreen mainScreen] bounds].size.height;
+    
     if(indexPath.row == 0) {
-        cell.tutorialLabel.frame = CGRectMake(0, 55, 320, 50);
+        cell.tutorialLabel.frame = CGRectMake(0, 0.03*height, 320, 50);
+        cell.tutorialImageView.frame = CGRectMake(55, 73, self.view.frame.size.width - 2*55, 315);
+        cell.tutorialImageView.image = [UIImage imageNamed:@"image_tutorial1.png"];
     }
     if(indexPath.row == 1) {
-        cell.tutorialLabel.frame = CGRectMake(0, 390, 320, 50);
+        cell.tutorialLabel.frame = CGRectMake(0, 0.68*height, 320, 50);
+        cell.tutorialImageView.frame = CGRectMake(55, 20, self.view.frame.size.width - 2*55, 315);
+        cell.tutorialImageView.image = [UIImage imageNamed:@"image_tutorial2.png"];
     }
     if(indexPath.row == 2) {
-        cell.tutorialLabel.frame = CGRectMake(0, 390, 320, 50);
+        cell.tutorialLabel.frame = CGRectMake(0, 0.70*height, 320, 50);
+        cell.tutorialImageView.frame = CGRectMake(55, 10, self.view.frame.size.width - 2*55, 315);
+        cell.tutorialImageView.image = [UIImage imageNamed:@"image_tutorial3.png"];
     }
     return cell;
 }

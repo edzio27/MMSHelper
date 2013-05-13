@@ -22,6 +22,10 @@
         _tutorialLabel.textAlignment = NSTextAlignmentCenter;
         _tutorialLabel.textColor = [UIColor colorWithRed:0.996 green:0.788 blue:0.027 alpha:1.0];
         _tutorialLabel.numberOfLines = 2;
+        
+        _tutorialImageView = [[UIImageView alloc] init];
+        
+        [self.contentView addSubview:_tutorialImageView];
         [self.contentView addSubview:_tutorialLabel];
         
         _imageView = imageView;
